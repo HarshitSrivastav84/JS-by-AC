@@ -80,18 +80,18 @@
 
 
 
-let promiseHai = new Promise((resolve, reject) => {
-    console.log("I am a promise");
-    reject("Some error occured");
-    resolve(123);
-});
+// let promiseHai = new Promise((resolve, reject) => {
+//     console.log("I am a promise");
+//     reject("Some error occured");
+//     resolve(123);
+// });
 
-// What to do with promises.
-let promise1 = promiseHai;
-promise1.then((res) => {
-    console.log("Promise fulfilled", res);
-})
-let promise2 = promiseHai;
-promise2.catch((err) => {
-    console.log("Promise rejected and got catched", err);
-})
+// // What to do with promises.
+// let promise1 = promiseHai;
+// promise1.then((res) => {
+//     console.log("Promise fulfilled", res);
+// })
+// let promise2 = promiseHai;
+// promise2.catch((err) => {
+//     console.log("Promise rejected and got catched", err);
+// })
