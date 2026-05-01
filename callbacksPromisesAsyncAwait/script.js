@@ -53,22 +53,19 @@
 
 
 
-// let promise = new Promise((resolve, reject) => {
-//     // console.log("I am a promise");
-//     // resolve(123);
-//     // reject("Some error occured");
-// })
-function getData2(id, giveData) {
-    return new Promise(resolve, reject => {
-        setTimeout(() => {
-            console.log("Trying");
-            resolve();
-            if (giveData2) {
-                giveData2();
-            }
-        }, 2000);
-    });
-}
+
+// function getData2(id, giveData) {
+//     return new Promise(resolve, reject => {
+//         setTimeout(() => {
+//             console.log("Trying", id);
+//             resolve("Success");
+//             if (giveData) {
+//                 giveData();
+//             }
+//         }, 2000);
+//     });
+// }
+
 // getData2(1);
 
 
@@ -79,3 +76,22 @@ function getData2(id, giveData) {
 //     }, 2000);
 // }
 // getData3(123)
+
+
+
+
+let promiseHai = new Promise((resolve, reject) => {
+    console.log("I am a promise");
+    reject("Some error occured");
+    resolve(123);
+});
+
+// What to do with promises.
+let promise1 = promiseHai;
+promise1.then((res) => {
+    console.log("Promise fulfilled", res);
+})
+let promise2 = promiseHai;
+promise2.catch((err) => {
+    console.log("Promise rejected and got catched", err);
+})
