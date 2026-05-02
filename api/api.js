@@ -1,4 +1,12 @@
-const URL = "https://cat-fact.herokuapp.com/facts";
+const URL = "https://v2.jokeapi.dev/joke/Programming?type=single";
 
-let promise = fetch(URL);
-console.log(promise);
+const factPara = document.querySelector("#fact");
+
+const getFacts = async () => {
+    console.log("Getting data...");
+    let response = await fetch(URL);
+    console.log(response);
+    
+    let data = await response.json();
+    factPara.innerText = data.joke;
+}
