@@ -8,5 +8,13 @@ const getFacts = async () => {
     console.log(response);
     
     let data = await response.json();
-    factPara.innerText = data.joke;
+
+    let newJoke = document.createElement("p");
+    newJoke.innerText = data.joke;
+    document.body.appendChild(newJoke);
+    // factPara.innerText = data.joke;   // This will replace the previous joke with the new one, instead of appending it to the body.
 }
+
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", getFacts);
+
